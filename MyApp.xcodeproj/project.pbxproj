@@ -12,6 +12,8 @@
 		1D65DE3A1FC4CADA00861E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D65DE381FC4CADA00861E8F /* Main.storyboard */; };
 		1D65DE3C1FC4CADA00861E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D65DE3B1FC4CADA00861E8F /* Assets.xcassets */; };
 		1D65DE3F1FC4CADA00861E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D65DE3D1FC4CADA00861E8F /* LaunchScreen.storyboard */; };
+		1DBFA7941FC4DDE00085E93B /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBFA7931FC4DDE00085E93B /* BorderButton.swift */; };
+		1DC366F01FC6338400755DA4 /* CalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC366EF1FC6338400755DA4 /* CalculatorManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		1D65DE3B1FC4CADA00861E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D65DE3E1FC4CADA00861E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D65DE401FC4CADA00861E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DBFA7931FC4DDE00085E93B /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		1DC366EF1FC6338400755DA4 /* CalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		1D65DE331FC4CADA00861E8F /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
-				1D65DE341FC4CADA00861E8F /* AppDelegate.swift */,
-				1D65DE361FC4CADA00861E8F /* ViewController.swift */,
-				1D65DE381FC4CADA00861E8F /* Main.storyboard */,
-				1D65DE3B1FC4CADA00861E8F /* Assets.xcassets */,
-				1D65DE3D1FC4CADA00861E8F /* LaunchScreen.storyboard */,
-				1D65DE401FC4CADA00861E8F /* Info.plist */,
+				1DC366EE1FC6335900755DA4 /* Controller */,
+				1DC366ED1FC6334F00755DA4 /* View */,
+				1DC366EC1FC6333700755DA4 /* Model */,
+				1DC366EB1FC632CA00755DA4 /* SupportFiles */,
 			);
 			path = MyApp;
+			sourceTree = "<group>";
+		};
+		1DC366EB1FC632CA00755DA4 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1D65DE401FC4CADA00861E8F /* Info.plist */,
+				1D65DE3B1FC4CADA00861E8F /* Assets.xcassets */,
+				1D65DE3D1FC4CADA00861E8F /* LaunchScreen.storyboard */,
+				1D65DE341FC4CADA00861E8F /* AppDelegate.swift */,
+			);
+			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		1DC366EC1FC6333700755DA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DC366EF1FC6338400755DA4 /* CalculatorManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DC366ED1FC6334F00755DA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DBFA7931FC4DDE00085E93B /* BorderButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DC366EE1FC6335900755DA4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D65DE381FC4CADA00861E8F /* Main.storyboard */,
+				1D65DE361FC4CADA00861E8F /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +176,8 @@
 			files = (
 				1D65DE371FC4CADA00861E8F /* ViewController.swift in Sources */,
 				1D65DE351FC4CADA00861E8F /* AppDelegate.swift in Sources */,
+				1DBFA7941FC4DDE00085E93B /* BorderButton.swift in Sources */,
+				1DC366F01FC6338400755DA4 /* CalculatorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,30 +313,34 @@
 		1D65DE441FC4CADA00861E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AX8AGE2WAC;
+				DEVELOPMENT_TEAM = 6MK6PNT7QQ;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = MyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.scopus.MyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.scopus.MyAppTeste;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1D65DE451FC4CADA00861E8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AX8AGE2WAC;
+				DEVELOPMENT_TEAM = 6MK6PNT7QQ;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = MyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.scopus.MyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.scopus.MyAppTeste;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
